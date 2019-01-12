@@ -14,7 +14,7 @@ public class DiaryEntity {
     //日记编号
     private int id;
     //日记创建人编号
-    private String userId;
+    private int userId;
     //日记标题
     private String diaryTitle;
     //日记内容
@@ -75,11 +75,11 @@ public class DiaryEntity {
         this.id = id;
     }
 
-    public String getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 

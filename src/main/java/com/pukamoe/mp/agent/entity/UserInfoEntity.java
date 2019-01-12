@@ -10,7 +10,7 @@ import java.util.Date;
  */
 public class UserInfoEntity {
     //用户编号
-    private String userId;
+    private int userId;
     //用户账户名
     private String userAccount;
     //用户密码
@@ -44,11 +44,11 @@ public class UserInfoEntity {
     //用户更新信息时间
     private Date updateTime;
 
-    public String getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 

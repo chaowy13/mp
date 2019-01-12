@@ -4,7 +4,7 @@ import com.pukamoe.mp.agent.entity.DiaryEntity;
 import com.pukamoe.mp.utils.DataSource;
 import java.util.List;
 
-public interface IDairyDAO {
+public interface IDiaryDAO {
 
     @DataSource("read")
     List<DiaryEntity> getDiaryList(DiaryEntity diaryEntity) throws Exception;
