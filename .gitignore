@@ -1,0 +1,9 @@
+/target/
+/.idea/
+.idea
+*.iml
+catalina*
+.DS_Store
+/.settings/
+.project
+.classpath
