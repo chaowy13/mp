@@ -1,6 +1,5 @@
-package com.pukamoe.mp.agent.entity;
+package com.pukamoe.mp.user.agent.entity;
 
-import com.pukamoe.mp.utils.DataSource;
 
 import java.util.Date;
 
@@ -9,38 +8,55 @@ import java.util.Date;
  * @Date: 2019/1/11 上午12:34
  */
 public class UserInfoEntity {
+
     //用户编号
     private int userId;
+
     //用户账户名
     private String userAccount;
+
     //用户密码
     private String userPwd;
+
     //用户昵称
     private String nickName;
+
     //用户头像url
     private String avatorUrl;
+
     //用户所在地
     private String region;
+
     //用户所在城市
     private String city;
+
     //用户所在省份
     private String province;
+
     //用户所在国家
     private String country;
+
     //用户性别
     private String gender;
+
     //用户使用语言
     private String language;
+
     //用户当前小程序openID
     private String openID;
+
     //用户微信UnionID
     private String unionID;
+
     //用户是否订阅日记提醒
     private boolean isSubscribed;
+
     //用户是否授权
     private boolean isAutherized;
+
     //用户注册时间
     private Date registerTime;
+
     //用户更新信息时间
     private Date updateTime;
 

@@ -1,6 +1,6 @@
-package com.pukamoe.mp.service;
+package com.pukamoe.mp.dairy.service;
 
-import com.pukamoe.mp.agent.entity.DiaryEntity;
+import com.pukamoe.mp.dairy.agent.entity.DiaryEntity;
 
 import java.util.List;
 

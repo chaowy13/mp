@@ -1,11 +1,11 @@
-package com.pukamoe.mp.service.impl;
+package com.pukamoe.mp.dairy.service.impl;
 
-import com.pukamoe.mp.agent.dao.IDiaryDAO;
-import com.pukamoe.mp.agent.entity.DiaryEntity;
-import com.pukamoe.mp.service.DiaryService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.pukamoe.mp.dairy.agent.dao.IDiaryDAO;
+import com.pukamoe.mp.dairy.agent.entity.DiaryEntity;
+import com.pukamoe.mp.dairy.service.DiaryService;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -16,8 +16,8 @@ import java.util.List;
 @Service
 public class DiaryServiceImpl implements DiaryService {
 
-    @Autowired
-    IDiaryDAO diaryDAO;
+    @Resource
+    private IDiaryDAO diaryDAO;
 
 
     /**
@@ -32,7 +32,7 @@ public class DiaryServiceImpl implements DiaryService {
         diaryEntity.setUserId(userId);
 
         try {
-            return diaryDAO.getDiaryList(diaryEntity);
+//            return diaryDAO.getDiaryList(diaryEntity);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -52,7 +52,7 @@ public class DiaryServiceImpl implements DiaryService {
         diaryEntity.setId(taskId);
 
         try {
-            return diaryDAO.getDiary(diaryEntity);
+//            return diaryDAO.getDiary(diaryEntity);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -77,7 +77,7 @@ public class DiaryServiceImpl implements DiaryService {
         diaryEntity.setDairyLength(dairyContext.length());
 
         try {
-            return diaryDAO.updateDiary(diaryEntity);
+//            return diaryDAO.updateDiary(diaryEntity);
         } catch (Exception e) {
             e.printStackTrace();
         }

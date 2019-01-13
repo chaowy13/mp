@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
+        <!--<property name="location" value="classpath*:/properties/jdbc.properties"/>-->
+    <!--</bean>-->
+
+    <!--<context:annotation-config />-->
+    <!--<context:component-scan base-package="com.pukamoe.mp"/>-->
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.driver.olog" />
+        <property name="url" value="jdbc:mysql://localhost:3306/dairy" />
+        <property name="username" value="root" />
+        <property name="password" value="110019" />
+    </bean>
+
+
+    <!--&lt;!&ndash; 配置mybatis的SessionFactory &ndash;&gt;-->
+    <!--<bean id="sessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
+        <!--<property name="dataSource" ref="dataSource"/>-->
+        <!--<property name="configLocation" value="classpath:/config/mybatis-config.xml"/>-->
+        <!--<property name="mapperLocations" value="classpath:/com/pukamoe/mp/**/*Mapper.xml"/>-->
+        <!--&lt;!&ndash; 配置此项则在mapper中可以直接使用实体类名，而不需要使用全路径名 &ndash;&gt;-->
+        <!--<property name="typeAliasesPackage" value="com.pukamoe.mp.**.entity"/>-->
+    <!--</bean>-->
+
+
+    <!--&lt;!&ndash; 自动扫描注册mapper接口类（接口类实现mybatis） &ndash;&gt;-->
+    <!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
+        <!--<property name="basePackage" value="com.pukamoe.mp.dairy.agent.dao.IDiaryDAO"/>-->
+    <!--</bean>-->
+
+
+    <!--事务管理器 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    <!-- 使用全注释事务 -->
+    <tx:annotation-driven transaction-manager="transactionManager" />
+
+
+    <!-- mybatis文件配置，扫描所有mapper文件 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"
+          p:dataSource-ref="dataSource"
+          p:configLocation="classpath:config/mybatis-config.xml"
+          p:mapperLocations="classpath:com/pukamoe/mp/**/*.xml"/>
+
+    <!-- 创建SqlSessionFactory，同时指定数据源-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <!-- 指定sqlMapConfig总配置文件，订制的environment在spring容器中不在生效-->
+        <property  name="configLocation"  value="classpath:sqlMapConfig.xml"/>
+    </bean>
+
+</beans>
