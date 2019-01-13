@@ -64,17 +64,17 @@ public class DiaryServiceImpl implements DiaryService {
     /**
      *  更改日记内容信息
      *
-     * @Param: [userId, taskId, diaryTitle, dairyContext]
+     * @Param: [userId, taskId, diaryTitle, diaryContext]
      */
     @Override
-    public Long updateStatus(int userId, int taskId, String diaryTitle, String dairyContext){
+    public Long updateStatus(int userId, int taskId, String diaryTitle, String diaryContext){
 
         DiaryEntity diaryEntity = new DiaryEntity();
         diaryEntity.setId(taskId);
         diaryEntity.setUserId(userId);
         diaryEntity.setDiaryTitle(diaryTitle);
         diaryEntity.setDiaryContext(diaryTitle);
-        diaryEntity.setDairyLength(dairyContext.length());
+        diaryEntity.setdiaryLength(diaryContext.length());
 
         try {
 //            return diaryDAO.updateDiary(diaryEntity);

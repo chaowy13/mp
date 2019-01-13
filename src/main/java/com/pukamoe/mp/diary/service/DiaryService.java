@@ -28,9 +28,9 @@ public interface DiaryService {
     /**
      *  更改日记内容信息
      *
-     * @Param: [userId, taskId, diaryTitle, dairyContext]
+     * @Param: [userId, taskId, diaryTitle, diaryContext]
      */
 
-    Long updateStatus(int userId, int taskId, String diaryTitle, String dairyContext);
+    Long updateStatus(int userId, int taskId, String diaryTitle, String diaryContext);
 
 }
