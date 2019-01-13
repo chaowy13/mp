@@ -3,10 +3,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.pukamoe.mp.diary.agent.dao.IDiaryDAO">
     <resultMap id="UserMap" type="com.pukamoe.mp.diary.agent.entity.DiaryEntity">
-        <id property="id" column="uid" />
-        <result property="id" column="id" />
+        <id property="id" column="id" />
         <result property="userId" column="userId"/>
-
+        <result property="diaryTitle" column="diary_title" />
+        <result property="diaryContent" column="diary_content"/>
         <result property="createTime" column="createTime"/>
         <result property="updateTime" column="updateTime"/>
     </resultMap>

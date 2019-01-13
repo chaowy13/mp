@@ -1,11 +1,14 @@
 package com.pukamoe.mp.diary.agent.entity;
 
+import lombok.Data;
+
 import java.util.Date;
 
 /**
  * @Author: pukamoe
  * @Date: 2019/1/10 上午12:07
  */
+@Data
 public class DiaryEntity {
     //日记创建时间
     private Date createTime;
@@ -18,7 +21,7 @@ public class DiaryEntity {
     //日记标题
     private String diaryTitle;
     //日记内容
-    private String diaryContext;
+    private String diaryContent;
     //日记字数
     private int dairyLength;
     //是否是星标日记
@@ -51,107 +54,4 @@ public class DiaryEntity {
      */
     private int weatherIndex;
 
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-
-    public String getDiaryTitle() {
-        return diaryTitle;
-    }
-
-    public void setDiaryTitle(String diaryTitle) {
-        this.diaryTitle = diaryTitle;
-    }
-
-    public String getDiaryContext() {
-        return diaryContext;
-    }
-
-    public void setDiaryContext(String diaryContext) {
-        this.diaryContext = diaryContext;
-    }
-
-    public int getDairyLength() {
-        return dairyLength;
-    }
-
-    public void setDairyLength(int dairyLength) {
-        this.dairyLength = dairyLength;
-    }
-
-    public int getFaceIndex() {
-        return faceIndex;
-    }
-
-    public void setFaceIndex(int faceIndex) {
-        this.faceIndex = faceIndex;
-    }
-
-    public int getWeatherIndex() {
-        return weatherIndex;
-    }
-
-    public void setWeatherIndex(int weatherIndex) {
-        this.weatherIndex = weatherIndex;
-    }
-
-    public boolean isStarred() {
-        return isStarred;
-    }
-
-    public void setStarred(boolean starred) {
-        isStarred = starred;
-    }
-
-    public boolean isLocked() {
-        return isLocked;
-    }
-
-    public void setLocked(boolean locked) {
-        isLocked = locked;
-    }
-
-    public boolean isSecret() {
-        return isSecret;
-    }
-
-    public void setSecret(boolean secret) {
-        isSecret = secret;
-    }
-
-    public String getSecretAnswer() {
-        return secretAnswer;
-    }
-
-    public void setSecretAnswer(String secretAnswer) {
-        this.secretAnswer = secretAnswer;
-    }
 }

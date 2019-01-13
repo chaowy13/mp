@@ -73,7 +73,7 @@ public class DiaryServiceImpl implements DiaryService {
         diaryEntity.setId(taskId);
         diaryEntity.setUserId(userId);
         diaryEntity.setDiaryTitle(diaryTitle);
-        diaryEntity.setDiaryContext(diaryTitle);
+        diaryEntity.setDiaryContent(diaryTitle);
         diaryEntity.setDairyLength(dairyContext.length());
 
         try {
