@@ -20,7 +20,7 @@ public class DiaryEntity {
     //日记内容
     private String diaryContext;
     //日记字数
-    private int dairyLength;
+    private int diaryLength;
     //是否是星标日记
     private boolean isStarred;
     //是否是上锁日记
@@ -99,12 +99,12 @@ public class DiaryEntity {
         this.diaryContext = diaryContext;
     }
 
-    public int getDairyLength() {
-        return dairyLength;
+    public int getdiaryLength() {
+        return diaryLength;
     }
 
-    public void setDairyLength(int dairyLength) {
-        this.dairyLength = dairyLength;
+    public void setdiaryLength(int diaryLength) {
+        this.diaryLength = diaryLength;
     }
 
     public int getFaceIndex() {
