@@ -1,4 +1,4 @@
-package com.pukamoe.mp.dairy.agent.entity;
+package com.pukamoe.mp.diary.agent.entity;
 
 import java.util.Date;
 

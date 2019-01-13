@@ -1,7 +1,7 @@
-package com.pukamoe.mp.controller;
+package com.pukamoe.mp.diary.controller;
 
 
-import com.pukamoe.mp.constants.UrlConstants;
+import com.pukamoe.mp.common.constants.UrlConstants;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 

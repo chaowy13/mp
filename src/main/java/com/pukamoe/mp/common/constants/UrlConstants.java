@@ -1,4 +1,4 @@
-package com.pukamoe.mp.constants;
+package com.pukamoe.mp.common.constants;
 
 public class UrlConstants {
 

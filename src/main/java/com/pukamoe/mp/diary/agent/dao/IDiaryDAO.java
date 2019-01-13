@@ -1,10 +1,7 @@
-package com.pukamoe.mp.dairy.agent.dao;
+package com.pukamoe.mp.diary.agent.dao;
 
 
-import com.pukamoe.mp.dairy.agent.entity.DiaryEntity;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 @Repository
 public interface IDiaryDAO {

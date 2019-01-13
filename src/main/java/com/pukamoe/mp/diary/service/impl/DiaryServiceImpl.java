@@ -1,8 +1,8 @@
-package com.pukamoe.mp.dairy.service.impl;
+package com.pukamoe.mp.diary.service.impl;
 
-import com.pukamoe.mp.dairy.agent.dao.IDiaryDAO;
-import com.pukamoe.mp.dairy.agent.entity.DiaryEntity;
-import com.pukamoe.mp.dairy.service.DiaryService;
+import com.pukamoe.mp.diary.agent.dao.IDiaryDAO;
+import com.pukamoe.mp.diary.agent.entity.DiaryEntity;
+import com.pukamoe.mp.diary.service.DiaryService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
